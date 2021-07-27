@@ -1,0 +1,262 @@
+#python3
+#importaciones
+from random import randint as rd
+#se importa randit para que la cpu pueda escoger una accion aleatoria 
+
+
+#entradas
+
+#menu para jugar
+
+print('---------kachipun------------')
+
+print('ingrse 1 para jugador vs jugador')
+print('ingrese 2 para jugador vs cpu')
+print('ingrese 3 para cpu vs cpu')
+
+#variable de opcion escogida por el jugador 
+Modo=int(input('ingrese el modo que desea jugar:'))
+
+if Modo==1:
+    #ciclo whyle para repetir el programa
+    #si repetir es diferente a 1 entonces el progrma se termina
+    repetir=1
+
+    while repetir==1:
+
+       jugador_1=input('ingrese el nombre del jugador 1:')
+       jugador_2=input('ingrese el nombre del jugador 2:')
+
+
+       #agregar condiciones de que solo puedan escoger los caracteres 1,2 y 3 
+       #agregar repetir el programa 'desea volver a intentarlo?'......listo
+
+
+       # procesos
+
+       print('eliga sus opciones')
+       print("ingrese 1 para escoger tijeras")
+       print('ingrese 2 para escoger piedra')
+       print('ingrese 3 para escoger papel')
+
+       tijeras=1
+       piedra=2
+       papel=3
+
+       resltado=True
+
+       while resltado==True:
+           opcionj1=int(input('escoga su opcion sr.jugador 1:'))
+           opcionj2=int(input('escoga su opcion sr.jugador 2:'))
+           #aqui deberia ir una condicion para que solo los caracteres 1,2 y 3 sean validos
+           #condicion 
+           
+
+
+
+           
+           #tijeras vs piedra
+           if opcionj1==1 and opcionj2==2:
+               print(jugador_2,'ha gando con piedra')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #tijeras vs papel 
+           elif opcionj1==1 and opcionj2==3:
+               print(jugador_1,'ha ganado con tijeras')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #piedra vs tijeras 
+           elif opcionj1==2 and opcionj2==1:
+               print(jugador_1,'ha ganado con piedra')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #piedra vs papel 
+           elif opcionj1==2 and opcionj2==3:
+               print(jugador_2,'ha ganado con papel')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #papel vs tijeras
+           elif opcionj1==3 and opcionj2==1:
+               print(jugador_2,'ha ganado con tijeras')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #papel vs piedra
+           elif opcionj1==3 and opcionj2==2:
+               print(jugador_1,'ha ganado con papel')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #en caso de empate
+           else:
+               print(jugador_1,'y',jugador_2,'han empatado porfavor vuelvan a escoger')
+               resltado==True
+
+elif Modo==2:
+    #ciclo whyle para repetir el programa
+    #si repetir es diferente a 1 entonces el progrma se termina
+    repetir=1
+
+    while repetir==1:
+        
+
+       jugador_1=input('ingrese el nombre del jugador 1:')
+       cpu=input('dame un nombre, humano:')
+       ocpu_1=rd(1,3)
+
+
+       #agregar condiciones de que solo puedan escoger los caracteres 1,2 y 3 
+       #agregar repetir el programa 'desea volver a intentarlo?'......listo
+
+
+       # procesos
+
+       print('eliga sus opciones')
+       print("ingrese 1 para escoger tijeras")
+       print('ingrese 2 para escoger piedra')
+       print('ingrese 3 para escoger papel')
+
+       tijeras=1
+       piedra=2
+       papel=3
+
+       resltado=True
+
+       while resltado==True:
+           opcionj1=int(input('escoga su opcion sr.jugador 1:'))
+           
+           #aqui deberia ir una condicion para que solo los caracteres 1,2 y 3 sean validos
+           #condicion 
+           
+
+
+
+           #tijeras vs piedra
+           if opcionj1==1 and ocpu_1==2:
+               print(cpu,'ha gando con piedra')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #tijeras vs papel 
+           elif opcionj1==1 and ocpu_1==3:
+               print(jugador_1,'ha ganado con tijeras')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #piedra vs tijeras 
+           elif opcionj1==2 and ocpu_1==1:
+               print(jugador_1,'ha ganado con piedra')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #piedra vs papel 
+           elif opcionj1==2 and ocpu_1==3:
+               print(cpu,'ha ganado con papel')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #papel vs tijeras
+           elif opcionj1==3 and ocpu_1==1:
+               print(cpu,'ha ganado con tijeras')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #papel vs piedra
+           elif opcionj1==3 and ocpu_1==2:
+               print(jugador_1,'ha ganado con papel')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #en caso de empate
+           else:
+               print(jugador_1,'y',cpu,'han empatado porfavor vuelvan a escoger')
+               resltado==True
+
+elif Modo==3:
+    #ciclo whyle para repetir el programa
+    #si repetir es diferente a 1 entonces el progrma se termina
+    repetir=1
+
+    while repetir==1:
+        
+
+       cpu_1=input('ingrese el nombre de la cpu n1:')
+       cpu_2=input('ingrese el nombre de la cpu n2:')
+       
+       #hacer que ambas variables tengan un resultado diferente 
+       ocpu_1=rd(1,3)
+       ocpu_2=rd(1,3)
+
+
+       #agregar condiciones de que solo puedan escoger los caracteres 1,2 y 3 
+       #agregar repetir el programa 'desea volver a intentarlo?'......listo
+
+
+       # procesos
+
+       
+       tijeras=1
+       piedra=2
+       papel=3
+
+       resltado=True
+
+       while resltado==True:
+           
+           #aqui deberia ir una condicion para que solo los caracteres 1,2 y 3 sean validos
+           #condicion 
+           
+
+
+
+           #tijeras vs piedra
+           if ocpu_1==1 and ocpu_2==2:
+               print(cpu_2,'ha gando con piedra')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #tijeras vs papel 
+           elif ocpu_1==1 and ocpu_2==3:
+               print(cpu_1,'ha ganado con tijeras')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #piedra vs tijeras 
+           elif ocpu_1==2 and ocpu_2==1:
+               print(cpu_1,'ha ganado con piedra')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #piedra vs papel 
+           elif ocpu_1==2 and ocpu_2==3:
+               print(cpu_2,'ha ganado con papel')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #papel vs tijeras
+           elif ocpu_1==3 and ocpu_2==1:
+               print(cpu_2,'ha ganado con tijeras')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #papel vs piedra
+           elif ocpu_1==3 and ocpu_2==2:
+               print(cpu_1,'ha ganado con papel')
+               resltado=False
+               repetir=int(input('desea repetir el juego?[1:Si/0:No]'))
+           
+           #en caso de empate
+           else:
+               print(cpu_1,'y',cpu_2,'han empatado porfavor vuelvan a escoger')
+               resltado==True
+
+       
+       
+
+       
+
+    
